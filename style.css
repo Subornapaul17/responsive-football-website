@@ -176,9 +176,9 @@ a {
 
 
 .match img {
-    width: 567px;
+    width: 480px;
     height: 427px;
-    margin-right: 156px;
+    margin-right: 75px;
     margin-left: 66px;
 
 
@@ -202,37 +202,57 @@ a {
     margin-left: 15px;
 }
 
-/*-------------- Footer----------- */
-.logo {
+
+/*----------------- footer------------r */
+
+.logo-part {
+
+    width: 240.87px;
+    height: 100px;
+    margin-left: 430px;
+    margin-top: 79px;
+    align-items: center;
+}
+
+.logo img {
     width: 483.87px;
     height: 110px;
-    align-items: center;
+}
 
-    margin-right: 481px;
+.icon {
+
+    display: flex;
+    flex-direction: row;
+    margin-left: 180px;
+
+
+
 
 }
 
+.icon i {
+
+    color: black;
+    margin-left: -25px;
+
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    font-weight: bold;
+
+}
+
+/* -----------------Media Query------------------- */
 
 
 
+/*------------------------- Mobile devices-------------------- */
+@media only screen and (max-width:688px) {
+    .background {
 
+        background-color: red;
 
-
-/*---------------------------- hover------------------- */
-/* .bg:hover,
-.bg-left,
-h1 {
-    color: red;
-    transform: scale(1.1);
-    transition: transform 1s ease-in-out;
-
-
-
-} */
-
-/* .watch-live:hover {
-
-    background-color: coral;
-    transform: scale(1.1) rotate(360deg);
-    transition: transform 1s ease-in-out, margin-top 3s ease-in-out, border-radius 4s, background-color 1s;
-} */
+    }
+}
