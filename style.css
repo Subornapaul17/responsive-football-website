@@ -244,15 +244,106 @@ a {
 
 }
 
+
+
+
+/*------------------ Hover---------------- */
+@keyframes sliding {
+    0% {
+        background-color: red;
+
+
+    }
+
+    25% {
+        background-color: yellow;
+
+    }
+
+    50% {
+        background-color: green;
+    }
+
+    75% {
+        background-color: darkviolet;
+    }
+
+
+
+    100% {
+        background-color: #E02C6D;
+    }
+
+}
+
+.watch-live,
+.watch-now {
+    background-color: chartreuse;
+    animation: sliding 2s ease-in-out 0.1s infinite alternate;
+    animation-play-state: running;
+    position: relative;
+}
+
+.login {
+    transition: transform 1s;
+
+}
+
+
+
+.login:hover {
+    background-color: red;
+    transform: rotate(360deg);
+}
+
+.poster img:hover {
+    transform: scale(1.50);
+    transition: transform 1s;
+}
+
+h1:hover {
+    color: red;
+    transform: scale(1.25);
+    transition: transform 1s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* -----------------Media Query------------------- */
 
 
 
 /*------------------------- Mobile devices-------------------- */
-@media only screen and (max-width:688px) {
+
+
+@media only screen and (max-width: 688px) {
     .background {
-
+        width: 100%;
         background-color: red;
-
     }
+
+    /* .navbar,
+    .players,
+    .highlight,
+    .logo-part,
+    .logo,
+    .last {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .logo,
+    .icon {
+        flex-direction: column;
+    } */
+
+
 }
