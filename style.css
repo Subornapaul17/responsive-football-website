@@ -13,7 +13,25 @@ body {
 }
 
 
+
+
+/* --------------sidebar---------------- */
+
+
+#check {
+    display: none;
+}
+
+label #btn,
+label #cancel {
+
+    display: none;
+}
+
+
+
 /*---------------- navbar------------ */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -21,7 +39,18 @@ body {
     line-height: 24px;
     font-size: 16px;
     margin-bottom: 67px;
+
 }
+
+.sb {
+    margin-top: 40px;
+}
+
+.sb a:hover,
+.sb a.active {
+    background-color: red;
+}
+
 
 .nav-right {
 
@@ -36,6 +65,9 @@ body {
     margin-top: 42px;
 
 }
+
+
+
 
 .login {
     margin-right: 124px;
@@ -122,7 +154,7 @@ a {
     width: 330px;
     height: 474px;
     grid-gap: 10px;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 10px 10px 10px rgba(11, 27, 205, 0.15);
 }
 
 .photo-frame {
@@ -248,6 +280,8 @@ a {
 
 
 /*------------------ Hover---------------- */
+
+
 @keyframes sliding {
     0% {
         background-color: red;
@@ -276,9 +310,16 @@ a {
 
 }
 
+
+
+
+
 .watch-live,
+.watch-live i,
 .watch-now,
-.login {
+.watch-now i,
+.login,
+.login i {
     animation: sliding 2s ease-in-out 0.1s infinite alternate;
     animation-play-state: running;
     position: relative;
@@ -290,48 +331,76 @@ a {
 }
 
 .background:hover .login {
-    background-color: red;
+    background-color: greenyellow;
     transform: rotate(360deg);
 
 }
 
 .background:hover .poster img {
-    transform: scale(1.50);
+    transform: scale(1.50) rotate(-5deg);
     transition: transform 1s;
+
 
 }
 
-.match img:hover {
+.highlight:hover .match img,
+.header {
     transform: scale(1.25);
-    transition: transform 1s;
+    transition: transform 1.5s;
 
 
 }
 
 
 .background:hover h1 {
-    color: red;
+    color: greenyellow;
     transform: scale(1.25);
     transition: transform 1s ease-in-out;
     margin-top: 20px;
 
+
 }
 
+@keyframes move {
+    0% {
+        color: red;
+
+
+    }
+
+    25% {
+        color: blue;
+
+    }
+
+    50% {
+        color: green;
+    }
+
+    75% {
+        color: darkviolet;
+    }
 
 
 
+    100% {
+        color: #E02C6D;
+    }
+
+}
+
+.header {
+    animation: move 2s ease-in-out 0.1s infinite alternate;
+    animation-play-state: running;
+    position: relative;
+}
+
+.highlight:hover .header {
+    color: red;
+    transform: rotate(360deg);
 
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 /* -----------------Media Query------------------- */
@@ -340,29 +409,89 @@ a {
 
 /*------------------------- Mobile devices-------------------- */
 
-
-
-
-
-
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 668px) {
 
     .background {
-        width: 420%;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+
+
+
+    .sb {
+
+        display: grid;
+        grid-template-columns: repeat(1, fr);
+        background-color: chartreuse;
+
+        width: 120px;
+        right: 600px;
+    }
+
+
+    .sb a {
+        background-color: rgb(22, 22, 136);
+        margin: 8px;
+
+    }
+
+    #check {
+        display: none;
+    }
+
+    label #btn,
+    label #cancel {
+
+        position: absolute;
+    }
+
+
+    .sb a:hover,
+    .sb a .active {
+        color: black;
+    }
+
+
+
+
+    .nav-option {
+        padding-left: 5px;
+        margin-top: 5px;
+        position: fixed;
+        width: 20%;
         background-color: red;
+        margin-left: 5px;
+
     }
 
-    .players,
-    .hg,
-    .match {
+    .nav-option a {
+        text-decoration: none;
+        color: #FFFFFF;
+        margin-right: 15px;
+        padding: 15px;
+    }
 
-        grid-template-columns: repeat(2, 1fr);
+    .toggle-btn {
+        display: block;
+    }
+
+
+    /*---------------- login---------- */
+    .login {
+        margin-right: 12px;
+        margin-top: 4px;
+    }
+
+    .login {
+        display: flex;
+        border: 1px solid #E02C6D;
+        background-color: #E02C6D;
+        width: 168px;
+        height: 44px;
+        margin-left: 5px;
+        padding: 10px 24px;
         align-items: center;
+        border-radius: 15px;
     }
-
-    .hg,
-    .match {
-        flex-direction: column;
-    }
-
 }
