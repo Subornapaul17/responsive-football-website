@@ -44,6 +44,7 @@ label #cancel {
 
 .sb {
     margin-top: 40px;
+    margin-left: 100px;
 }
 
 .sb a:hover,
@@ -87,6 +88,10 @@ label #cancel {
     border-radius: 15px;
 }
 
+.watch-live {
+    margin-top: 80px;
+}
+
 .login a,
 .watch-live a {
     margin-left: 18px;
@@ -106,7 +111,7 @@ h1 {
     margin-left: 156px;
     line-height: 80px;
     margin-bottom: 20px;
-    margin-top: 60px;
+    margin-top: 20px;
     margin-right: 100PX;
 }
 
@@ -129,10 +134,9 @@ a {
 /* banner design */
 .poster img {
     width: 410px;
-    /* height: 620;S */
-
     margin-bottom: 100px;
     margin-right: 200PX;
+    margin-top: 30px;
 }
 
 
@@ -212,7 +216,6 @@ a {
     height: 427px;
     margin-right: 75px;
     margin-left: 66px;
-
 
 
 }
@@ -359,6 +362,7 @@ a {
     margin-top: 20px;
 
 
+
 }
 
 @keyframes move {
@@ -409,7 +413,7 @@ a {
 
 /*------------------------- Mobile devices-------------------- */
 
-@media only screen and (max-width: 668px) {
+@media only screen and (max-width: 688px) {
 
     .background {
         width: 100%;
@@ -479,8 +483,8 @@ a {
 
     /*---------------- login---------- */
     .login {
-        margin-right: 12px;
-        margin-top: 4px;
+        margin-right: 35px;
+        margin-top: 20pxpx;
     }
 
     .login {
@@ -493,5 +497,114 @@ a {
         padding: 10px 24px;
         align-items: center;
         border-radius: 15px;
+    }
+
+    h1 {
+        color: #FFFFFF;
+        font-size: 55px;
+        margin-left: 180px;
+        line-height: 80px;
+        margin-top: -45px;
+        margin-right: 120PX;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .watch-live {
+
+        margin-left: 40px;
+        margin-top: 80px;
+
+
+    }
+
+
+
+
+
+    .poster {
+        margin-left: -410px;
+
+    }
+
+    .poster img {
+        width: 310px;
+        margin-top: 550px;
+
+
+    }
+
+    .players {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+
+
+        margin-left: 170px;
+        margin-top: 70px;
+        margin-right: 210px;
+    }
+
+
+
+
+    .hg {
+        margin-left: -100px;
+        margin-top: -150px;
+    }
+
+    .header {
+        margin-left: 100px;
+    }
+
+    .highlight-details {
+        margin-left: 50px;
+    }
+
+    .watch-now {
+        margin-left: 50px;
+    }
+
+    .match img {
+        margin-top: 350px;
+        margin-left: -510px;
+    }
+
+    .logo-part {
+
+        margin-left: 87px;
+    }
+
+
+}
+
+
+/* --------------------------for tab---------------------------
+------------------------------------------------------------- */
+
+@media only screen and (min-width: 689px) and (max-width:1300px) {
+
+    .background {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+
+    .sb {
+
+        display: grid;
+        grid-template-columns: repeat(1, fr);
+        background-color: chartreuse;
+
+        width: 120px;
+        right: 600px;
+    }
+
+
+    .sb a {
+        background-color: rgb(22, 22, 136);
+        margin: 10px;
+
     }
 }
